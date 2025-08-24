@@ -327,6 +327,24 @@
             margin-top: 50px;
         }
 
+        .complex-card {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1200px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 900px;
+                margin: 50px auto 0;
+            }
+            
+            .complex-card {
+                grid-column: 1 / -1;
+            }
+        }
+
         .pricing-card {
             background: white;
             border-radius: 20px;
@@ -760,67 +778,82 @@
         <div class="container">
             <div class="section-title">
                 <h2>Análise de Contratos</h2>
-                <p>Preços justos baseados no tamanho do seu contrato - pague apenas pelo que usar</p>
+                <p>Preços baseados no tipo e complexidade do seu contrato - pague apenas pelo que usar</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Contratos Pequenos</h3>
-                    <div class="price">R$ 10</div>
-                    <div class="price-period">até 5 páginas</div>
+                    <h3>Consumo / Crediário</h3>
+                    <div class="price">R$ 9,90 - R$ 19,90</div>
+                    <div class="price-period">Serviços básicos</div>
                     <ul class="pricing-features">
-                        <li>Análise completa do documento</li>
-                        <li>Identificação de riscos</li>
+                        <li>Contratos de consumo</li>
+                        <li>Financiamentos simples</li>
+                        <li>Serviços básicos</li>
+                        <li>Análise de cláusulas abusivas</li>
                         <li>Relatório em 24-48h</li>
-                        <li>Sugestões básicas</li>
                         <li>Suporte por email</li>
-                        <li>Pagamento único</li>
                     </ul>
-                    <button class="btn btn-secondary" onclick="openModal('analysis', 'small')">Analisar Agora</button>
+                    <button class="btn btn-secondary" onclick="openModal('analysis', 'consumer')">Analisar Agora</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Contratos Médios</h3>
-                    <div class="price">R$ 20</div>
-                    <div class="price-period">até 10 páginas</div>
+                    <h3>Trabalho / MEI</h3>
+                    <div class="price">R$ 29,90 - R$ 49,90</div>
+                    <div class="price-period">Prestação de serviços</div>
                     <ul class="pricing-features">
-                        <li>Análise detalhada completa</li>
-                        <li>Identificação de todos os riscos</li>
-                        <li>Relatório em 24-48h</li>
-                        <li>Recomendações específicas</li>
-                        <li>Suporte por email e telefone</li>
-                        <li>Pagamento único</li>
+                        <li>Contratos trabalhistas</li>
+                        <li>Prestação de serviços MEI</li>
+                        <li>Terceirização</li>
+                        <li>Análise de direitos e deveres</li>
+                        <li>Relatório detalhado em 24h</li>
+                        <li>Suporte por email e WhatsApp</li>
                     </ul>
-                    <button class="btn btn-secondary" onclick="openModal('analysis', 'medium')">Analisar Agora</button>
+                    <button class="btn btn-secondary" onclick="openModal('analysis', 'work')">Analisar Agora</button>
                 </div>
 
                 <div class="pricing-card popular">
                     <div class="popular-badge">Mais Procurado</div>
-                    <h3>Contratos Grandes</h3>
-                    <div class="price">R$ 50</div>
-                    <div class="price-period">até 30 páginas</div>
+                    <h3>Locação</h3>
+                    <div class="price">R$ 39,90 - R$ 59,90</div>
+                    <div class="price-period">Residencial ou comercial</div>
                     <ul class="pricing-features">
-                        <li>Análise jurídica completa</li>
-                        <li>Identificação de riscos críticos</li>
-                        <li>Relatório detalhado em 24h</li>
-                        <li>Recomendações estratégicas</li>
+                        <li>Contratos de aluguel</li>
+                        <li>Locação residencial</li>
+                        <li>Locação comercial</li>
+                        <li>Análise de garantias</li>
+                        <li>Verificação de cláusulas</li>
                         <li>Suporte prioritário</li>
-                        <li>Pagamento único</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="openModal('analysis', 'large')">Analisar Agora</button>
+                    <button class="btn btn-primary" onclick="openModal('analysis', 'rental')">Analisar Agora</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>Contratos Complexos</h3>
-                    <div class="price">R$ 100</div>
-                    <div class="price-period">acima de 30 páginas</div>
+                    <h3>Empresarial</h3>
+                    <div class="price">R$ 79,90 - R$ 149,90</div>
+                    <div class="price-period">Simples / Parcerias</div>
                     <ul class="pricing-features">
+                        <li>Contratos empresariais</li>
+                        <li>Sociedades simples</li>
+                        <li>Parcerias comerciais</li>
+                        <li>Análise de riscos corporativos</li>
+                        <li>Relatório executivo</li>
+                        <li>Consultoria telefônica</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="openModal('analysis', 'business')">Analisar Agora</button>
+                </div>
+
+                <div class="pricing-card complex-card">
+                    <h3>Complexos</h3>
+                    <div class="price">R$ 199,90 - R$ 399,90</div>
+                    <div class="price-period">Societário, franquia, tech</div>
+                    <ul class="pricing-features">
+                        <li>Contratos societários</li>
+                        <li>Franquias e licenciamentos</li>
+                        <li>Tecnologia e inovação</li>
                         <li>Análise jurídica especializada</li>
                         <li>Revisão cláusula por cláusula</li>
-                        <li>Relatório executivo em 24h</li>
-                        <li>Consultoria telefônica inclusa</li>
-                        <li>Suporte premium</li>
-                        <li>Pagamento único</li>
+                        <li>Suporte premium 24/7</li>
                     </ul>
                     <button class="btn btn-secondary" onclick="openModal('analysis', 'complex')">Analisar Agora</button>
                 </div>
@@ -860,37 +893,45 @@
                 <p>Primeiro, selecione o tamanho do seu contrato para ver o preço:</p>
                 
                 <div class="price-options">
-                    <div class="price-option" onclick="selectPrice('small', 10)">
+                    <div class="price-option" onclick="selectPrice('consumer', '9,90 - 19,90')">
                         <div class="price-option-header">
-                            <h3>Até 5 páginas</h3>
-                            <div class="price-badge">R$ 10,00</div>
+                            <h3>Consumo / Crediário</h3>
+                            <div class="price-badge">R$ 9,90 - R$ 19,90</div>
                         </div>
-                        <p>Ideal para contratos simples</p>
+                        <p>Contratos de consumo e serviços básicos</p>
                     </div>
                     
-                    <div class="price-option" onclick="selectPrice('medium', 20)">
+                    <div class="price-option" onclick="selectPrice('work', '29,90 - 49,90')">
                         <div class="price-option-header">
-                            <h3>Até 10 páginas</h3>
-                            <div class="price-badge">R$ 20,00</div>
+                            <h3>Trabalho / MEI</h3>
+                            <div class="price-badge">R$ 29,90 - R$ 49,90</div>
                         </div>
-                        <p>Para contratos de complexidade média</p>
+                        <p>Contratos trabalhistas e prestação de serviços</p>
                     </div>
                     
-                    <div class="price-option popular-option" onclick="selectPrice('large', 50)">
+                    <div class="price-option popular-option" onclick="selectPrice('rental', '39,90 - 59,90')">
                         <div class="popular-mini-badge">Mais Escolhido</div>
                         <div class="price-option-header">
-                            <h3>Até 30 páginas</h3>
-                            <div class="price-badge">R$ 50,00</div>
+                            <h3>Locação</h3>
+                            <div class="price-badge">R$ 39,90 - R$ 59,90</div>
                         </div>
-                        <p>Para contratos empresariais</p>
+                        <p>Contratos de aluguel residencial ou comercial</p>
                     </div>
                     
-                    <div class="price-option" onclick="selectPrice('complex', 100)">
+                    <div class="price-option" onclick="selectPrice('business', '79,90 - 149,90')">
                         <div class="price-option-header">
-                            <h3>Acima de 30 páginas</h3>
-                            <div class="price-badge">R$ 100,00</div>
+                            <h3>Empresarial</h3>
+                            <div class="price-badge">R$ 79,90 - R$ 149,90</div>
                         </div>
-                        <p>Para contratos complexos</p>
+                        <p>Contratos empresariais e parcerias</p>
+                    </div>
+
+                    <div class="price-option" onclick="selectPrice('complex', '199,90 - 399,90')">
+                        <div class="price-option-header">
+                            <h3>Complexos</h3>
+                            <div class="price-badge">R$ 199,90 - R$ 399,90</div>
+                        </div>
+                        <p>Societário, franquias e tecnologia</p>
                     </div>
                 </div>
             </div>
@@ -965,25 +1006,26 @@
             document.getElementById('fileUpload').style.display = 'none';
         }
 
-        function selectPrice(size, price) {
-            selectedPlan = { size, price };
+        function selectPrice(type, priceRange) {
+            selectedPlan = { type, priceRange };
             
-            const sizeTexts = {
-                'small': 'Até 5 páginas',
-                'medium': 'Até 10 páginas',
-                'large': 'Até 30 páginas',
-                'complex': 'Acima de 30 páginas'
+            const typeTexts = {
+                'consumer': 'Consumo / Crediário',
+                'work': 'Trabalho / MEI',
+                'rental': 'Locação (residencial/comercial)',
+                'business': 'Empresarial Simples',
+                'complex': 'Contratos Complexos'
             };
             
-            const title = `Análise de Contrato - ${sizeTexts[size]}`;
-            const description = `Upload do seu contrato para análise jurídica completa`;
-            const submitText = `Pagar R$ ${price},00 e Analisar`;
+            const title = `Análise de Contrato - ${typeTexts[type]}`;
+            const description = `Upload do seu contrato para análise jurídica especializada`;
+            const submitText = `Solicitar Orçamento (R$ ${priceRange})`;
             
             showUploadStep(title, description, submitText);
             
             // Update plan info
-            document.getElementById('planSize').textContent = sizeTexts[size];
-            document.getElementById('planPrice').textContent = `R$ ${price},00`;
+            document.getElementById('planSize').textContent = typeTexts[type];
+            document.getElementById('planPrice').textContent = `R$ ${priceRange}`;
         }
 
         function showUploadStep(title, description, submitText) {
@@ -1065,18 +1107,25 @@
             if (!selectedPlan && !fileInput.files[0]) return;
             
             const fileName = fileInput.files[0]?.name || 'contrato.pdf';
-            const planInfo = selectedPlan ? ` (${selectedPlan.size} - R$ ${selectedPlan.price},00)` : '';
             
-            // Simulate payment and file processing
-            submitBtn.innerHTML = '<div style="display: inline-block; width: 16px; height: 16px; border: 2px solid #ffffff; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite; margin-right: 10px;"></div>Processando Pagamento...';
+            // Simulate file processing and quote generation
+            submitBtn.innerHTML = '<div style="display: inline-block; width: 16px; height: 16px; border: 2px solid #ffffff; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite; margin-right: 10px;"></div>Analisando Documento...';
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                submitBtn.innerHTML = '<div style="display: inline-block; width: 16px; height: 16px; border: 2px solid #ffffff; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite; margin-right: 10px;"></div>Enviando Contrato...';
+                submitBtn.innerHTML = '<div style="display: inline-block; width: 16px; height: 16px; border: 2px solid #ffffff; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite; margin-right: 10px;"></div>Gerando Orçamento...';
                 
                 setTimeout(() => {
+                    const typeNames = {
+                        'consumer': 'Consumo / Crediário',
+                        'work': 'Trabalho / MEI', 
+                        'rental': 'Locação',
+                        'business': 'Empresarial',
+                        'complex': 'Complexos'
+                    };
+                    
                     const message = selectedPlan ? 
-                        `✅ Pagamento Confirmado e Contrato Enviado!\n\n📄 Arquivo: "${fileName}"\n💰 Valor Pago: R$ ${selectedPlan.price},00\n📏 Categoria: ${selectedPlan.size === 'small' ? 'Até 5 páginas' : selectedPlan.size === 'medium' ? 'Até 10 páginas' : selectedPlan.size === 'large' ? 'Até 30 páginas' : 'Acima de 30 páginas'}\n\n📧 Você receberá:\n• Confirmação de pagamento por email\n• Análise completa do contrato\n• Relatório detalhado em 24-48h\n\nObrigado por escolher a JurisConnect!` :
+                        `✅ Contrato Recebido e Analisado!\n\n📄 Arquivo: "${fileName}"\n📋 Categoria: ${typeNames[selectedPlan.type]}\n💰 Faixa de Preço: R$ ${selectedPlan.priceRange}\n\n📧 Você receberá em breve:\n• Orçamento exato baseado na complexidade\n• Análise prévia do documento\n• Prazo de entrega personalizado\n• Forma de pagamento\n\n⏱️ Resposta em até 2 horas!\n\nObrigado por escolher a JurisConnect!` :
                         `✅ Contrato "${fileName}" enviado com sucesso!\n\nVocê receberá a interpretação detalhada em até 24-48h no seu email.\n\nObrigado por escolher a JurisConnect!`;
                     
                     alert(message);
